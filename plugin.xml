@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="xmlindogshowentry.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="xmlindogshowentry.Perspective"
+            name="RCP Perspective"
+            id="XmlInDogShowEntry.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="xmlindogshowentry.DogShow"
+            id="RcpView.view2"
+            name="DogShowEntry"
+            restorable="true">
+      </view>
+      <view
+            class="xmlindogshowentry.EmpTableViewer"
+            id="RcpView.view1"
+            name="Employee Details"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <view
+               closeable="false"
+               id="RcpView.view2"
+               minimized="false"
+               ratio="0.5f"
+               relationship="left"
+               relative="org.eclipse.ui.editorss">
+         </view>
+      </perspectiveExtension>
+      <perspectiveExtension
+            targetID="*">
+         <view
+               closeable="false"
+               id="RcpView.view1"
+               minimized="false"
+               ratio="0.5f"
+               relationship="left"
+               relative="org.eclipse.ui.editorss">
+         </view>
+      </perspectiveExtension>
+   </extension>
+
+</plugin>

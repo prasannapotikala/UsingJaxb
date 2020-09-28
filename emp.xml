@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employee empId="109">
+    <empAge>25</empAge>
+    <empName>Chinmai</empName>
+    <empSalary>57000.0</empSalary>
+    <gender>Female</gender>
+</employee>
